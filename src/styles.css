@@ -1,3 +1,6 @@
+html{
+    overflow-y: hidden;
+}
 .container-fluid{
     width: 100%;
     height: 100%;
@@ -16,8 +19,28 @@
     justify-content: center;
 }
 
-.loginbk{
-    width: 0;
+/* .triangle{
+    width: 10rem;
+    height: 10rem;
+    border-left: 28rem solid white;
+    border-bottom: 18rem solid transparent;
+    border-top: 18rem solid transparent;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 9rem; */
+    /* background: #ccc;
+    position: absolute;
+    pointer-events: auto;
+    content: ''; */
+    /* height: 20rem;
+    width: 20rem;
+    overflow: hidden;
+    position: relative;
+    margin:2em auto;
+    border-radius: 20%;
+    transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+    background-color: white; */
+            /* width: 0;
     height: 0;
     border-top: 18rem solid transparent;
     border-left: 30rem solid white;
@@ -27,11 +50,86 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: absolute; */
+/* } */
+/* .triangle::before{
+    border-radius: 20% 20% 20% 53%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(30deg) scaleY(.866) translateX(-24%);
 }
-form{
+.triangle::after{
+    border-radius: 20% 20% 53% 20%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(-30deg) scaleY(.866) translateX(24%);
+} */
+
+
+.triangle-bg-lg, .triangle-bg-lg:before, .triangle-bg-lg:after { 
+    width: 40rem; 
+    height: 40rem; 
+}
+.triangle-bg-lg{
+    overflow: hidden;
     position: relative;
-    padding-top: 10rem;
-    margin-right: 5rem;
+    border-radius: 20%;
+    transform: translateY(-3%) translateX(-25%) rotate(120deg) skewY(30deg) scaleX(.866);
+} 
+.triangle-bg-lg:before, .triangle-bg-lg:after{
+    position: absolute;
+    background: white;
+    pointer-events: auto;
+    content: '';
+}
+
+.triangle-bg-lg:before{
+    border-radius: 20% 20% 20% 53%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.triangle-bg-lg:after{
+    border-radius: 20% 20% 53% 20%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(-30deg) scaleY(.866) translateX(24%);
+}
+.loginForm img{
+    width: 5rem;
+}
+.loginForm h4{
+margin-top: 1rem;
+}
+.loginForm{
+    position: absolute;
+    padding-top: 8rem;
+    text-align: center;
+}
+.form-group{
+    margin-top: 1rem;
+}
+.form-group input{
+    height: 3rem;
+    width: 18rem;
+    border:none ;
+    outline: none;
+    filter: drop-shadow(0px 1px 1px grey);
+}
+::placeholder{
+   text-align: center;
+   color: #8DC4EC;
+}
+
+.form-group .btn-dark{
+    width: 8rem;
+    height: 25px;
+    font-size: small;
+    padding: 0;
+    border-radius: 1rem;
+    background-color: #3B4B4B;
+    color: #3DE7FB;
+}
     
+.loginForm p{
+    text-align: start;
+    margin-top: 1rem;
+    font-size: smaller;
+    color: #0452A0;
 }
