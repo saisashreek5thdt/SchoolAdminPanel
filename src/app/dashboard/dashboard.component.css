@@ -99,12 +99,14 @@ a:hover{
 .nav p{
 text-align: center;
 font-size: 12px;
+margin-left: 0 !important;
 font-family: bahnschrift;
 }
 
 .dashboard-bg{
     background-color: #DCFFD4;
     height: 100vh;
+    overflow: auto;
 }
 .card{
     height: 15rem;
@@ -117,9 +119,17 @@ font-family: bahnschrift;
     text-align: center;
     color: white;
 }
+h3{
+    margin-top: 1rem;
+    font-size: medium;
+    font-weight: 500;
+}
+.school-logo{
+ width: 2rem;
+ margin-top: 8px;
+}
 .card img{
-    width: 2rem;
-    margin-top: 8px;
+   
 }
 .logo-bg-circle{
     height: 3rem;
@@ -127,18 +137,28 @@ font-family: bahnschrift;
     border-radius: 50%;
     background-color: white;
     text-align: center;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    /* position: fixed; */
+}
+.create-reminder{
+    text-align: start;
+    margin-top: 5rem;
 }
 h5{
     font-size: medium;
-    margin-top: 1rem;
+    margin-top: 10px;
     border-bottom: 2px solid #3DD2E1;
 }
 .btn-save{
     background-color: #3B4B4B;
     color: #3DE7FB;
-    font-size: small;
+    font-size: 14px;
     margin-top: 1rem;
     border-radius: 20px;
+    height: 24px;
+    padding: 0;
+    width: 4rem;
 }
 .card-body a{
     text-decoration: none;
@@ -155,38 +175,96 @@ h5{
     display: inline-flex;
     margin: 10px;
     margin-top: 2rem;
+    color:black;
+}
+.students-bg-circle{
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 10px;
 }
 .icons-bg-circle{
-    height: 50px;
-    width: 50px;
+    height: 58px;
+    width: 58px;
     background-color: white;
     border-radius: 50%;
-    margin-top: -22px;
-    margin-left: 15px;
-    position: absolute;
+    margin-top: -60px;
+    margin-left: 11px;
+    text-align: center;
+    /* position: absolute; */
 }
 .male-kid{
-    width: 27px !important;
+    margin-top: 6px;
+    width: 30px !important;
 }
 .female-kid{
-    width: 20px !important;
+    margin-top: 6px;
+    width: 23px !important;
 }
 h4{
-    margin-top: 36px;
-    margin-left: 2rem;
+    color: #114150;
+    margin-top: 40px;
+    margin-left: 29px;
+    position: absolute;
 }
 .icons-background{
     height: 5rem;
     width: 5rem;
     border-radius: 10px;
     background-color: #0452A0;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    margin: 14px;
+    border-bottom-width: 1px solid black;
+    /* border-bottom: 8px solid black; */
 }
 .bg{
     display: flex;
-    margin-top: 2rem;
+    justify-content: center;
+    padding-top: 2rem;
 }
 .bg img{
     width: 30px;
-    margin-left: 11px;
-    margin-top: 8px;
+    /* margin-left: 11px; */
+    margin-top: 13px;
+}
+/* .card p{
+    font-size: 16px;
+    text-align: left;
+    /* margin-top: 0px; */
+    /* margin-left: -4rem !important; */
+/* } */ 
+p input{
+    height: 3rem;
+    width: 5rem;
+}
+.description{
+    font-size: small;
+}
+
+.notifications-bar{
+    height: 9rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    font-weight: 300;
+    font-family: Bahnschrift;
+    /* border-left-width: 10px;
+    border-left-style: solid; */
+/* border-image: linear-gradient(to top right,#464141,#A8A8A8);; */
+    /* background-image: linear-gradient(to top right,#464141,#A8A8A8); */
+}
+.notifications-heading{
+    width: 10rem;
+    padding-top: 55px;
+    font-size: large;
+    color: #1DFF68;
+    background-image: linear-gradient(#A8A8A8,#464141 75%);
 }
