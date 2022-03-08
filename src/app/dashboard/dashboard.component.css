@@ -1,6 +1,10 @@
 :root{
   --linearGradientBlue-color:linear-gradient(#7BB9E6,#113D68);  
 }
+.container-fluid{
+    height: 100vh;
+    overflow: auto;
+}
 ::-webkit-scrollbar{
     width: 18px;
 }
@@ -9,7 +13,7 @@
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(#7BB9E6,#113D68);
+    background-image: linear-gradient(to top right,#053AA4,#00CB8D);
     border-radius: 10px;
   }
   
@@ -17,10 +21,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(#C6E5FB,#2D8CD5);
   }
-.container-fluid{
-    height: 100vh;
-    overflow: auto;
-}
+
 
 .modal-content{
     height: 34rem;
@@ -39,7 +40,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     color: white;
-    width: 13rem;
+    width: 13rem !important;
     text-align: center;
     align-items: flex-start !important;
 }
@@ -138,6 +139,7 @@ font-family: bahnschrift;
 }
 .card{
     height: 15rem;
+    width: 15rem;
     align-items: center;
     margin-top: 1rem;
     border-radius: 20px;
@@ -156,9 +158,7 @@ h3{
  width: 2rem;
  margin-top: 8px;
 }
-.card img{
-   
-}
+
 .logo-bg-circle{
     height: 3rem;
     width: 3rem;
@@ -192,6 +192,18 @@ h5{
     text-decoration: none;
     font-size: small;
     color: white;
+    margin-top: 1rem;
+}
+.studentsCount{
+    width: 18rem;
+}
+.cards-background{
+    display: flex;
+    justify-content: center;
+    
+}
+.cards-background .card{
+    margin: 5px;
     margin-top: 1rem;
 }
 .students-bg{
