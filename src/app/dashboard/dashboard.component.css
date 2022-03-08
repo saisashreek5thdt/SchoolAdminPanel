@@ -1,6 +1,33 @@
 :root{
   --linearGradientBlue-color:linear-gradient(#7BB9E6,#113D68);  
 }
+::-webkit-scrollbar{
+    width: 18px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#7BB9E6,#113D68);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(#C6E5FB,#2D8CD5);
+  }
+.container-fluid{
+    height: 100vh;
+    overflow: auto;
+}
+
+.modal-content{
+    height: 34rem;
+    width: 20rem;
+    border-radius: 25px;
+    background-color: #FFB33C;
+}
 
 .nav-card{
     /* background-color: #7BB9E6; */
@@ -73,14 +100,14 @@ h6{
     width: 6rem ;
 }
 .nav{
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     flex-wrap: nowrap;
     margin-left: -10px;
     height: 20rem;
     width:max-content
 }
 .nav-link{
-    margin-top: -3px;
+    margin-top: -4px;
     padding-left: 25px;
     margin-left: -10px;
     font-size: 12px;
@@ -93,6 +120,7 @@ a{
 }
 a:hover{
     background-color: #A6F0FC;
+    border-radius: 6px;
     color: #4D5057;
 }
 
@@ -105,8 +133,8 @@ font-family: bahnschrift;
 
 .dashboard-bg{
     background-color: #DCFFD4;
-    height: 100vh;
-    overflow: auto;
+    /* height: 100vh;
+    overflow: auto; */
 }
 .card{
     height: 15rem;
@@ -146,7 +174,7 @@ h3{
     margin-top: 5rem;
 }
 h5{
-    font-size: medium;
+    font-size: 15px;
     margin-top: 10px;
     border-bottom: 2px solid #3DD2E1;
 }
@@ -191,8 +219,9 @@ h5{
     width: 58px;
     background-color: white;
     border-radius: 50%;
-    margin-top: -60px;
-    margin-left: 11px;
+    display: inline-block;
+    margin-top: -16px;
+    /* margin-left: 11px; */
     text-align: center;
     /* position: absolute; */
 }
@@ -211,16 +240,16 @@ h4{
     position: absolute;
 }
 .icons-background{
-    height: 5rem;
+    height: 5.2rem;
     width: 5rem;
     border-radius: 10px;
     background-color: #0452A0;
     font-size: 10px;
     text-align: center;
     color: white;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     margin: 14px;
-    border-bottom-width: 1px solid black;
+    /* border-bottom-width: 1px solid black; */
     /* border-bottom: 8px solid black; */
 }
 .bg{
@@ -229,9 +258,108 @@ h4{
     padding-top: 2rem;
 }
 .bg img{
-    width: 30px;
+    width: 42px;
+    height: 38px;
     /* margin-left: 11px; */
-    margin-top: 13px;
+    margin-top: 10px;
+}
+.option{
+    /* height: 0rem; */
+    display: inline-block;
+    vertical-align: middle;
+    /* line-height: 1rem; */
+}
+.reminder{
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.reminder span{
+ float: left;
+ text-align: start;
+ display: flex;
+ flex-direction: column;
+ font-size: 14px;
+font-weight: 500;
+height: 6rem;
+width: 12.8rem;
+}
+.reminder span:last-child{
+    height: 5rem;
+}
+.reminder label{
+    font-size: x-small;
+}
+.reminder input{
+    width: 3.2rem;
+    height: 1rem;
+    margin: 3px;
+}
+.reminder input[type=text]{
+    width: 5rem;
+    height: 3rem;
+    margin: 4px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+}
+.btn-edit,.btn-delete,.btn-complete{
+    height: 1.5rem;
+    width: 3.8rem;
+    font-size: 8px;
+    padding-top: 2px;
+    background-image: linear-gradient(#7BB9E6,#113D68);
+    color: white;
+    float: right;
+    margin-left: 9rem;
+    
+}
+.btn-delete{
+    background-image: linear-gradient(#C6E5FB,#2D8CD5);
+}
+
+.datetime #today{
+    float: right;
+    margin-top: 2rem;
+    font-size: medium;
+    font-weight: 500;
+    color: #00FFE5
+}
+
+.time{
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.time span{
+    /* position: relative; */
+    /* margin: 0 6px; */
+    font-size: 50px;
+}
+.time span:first-child{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -2rem;
+}
+.date{
+    margin-left: 20px;
+    display: flex;
+}
+.date span{
+    position: relative;
+    margin: 0 10px;
+ 
+    font-size: 11px;
+    font-weight: 600;
+    color: #00FFE5;
+}
+.date p{
+    font-size: 11px;
+    margin-top: 0;
+    text-align: center;
+    color: white;
 }
 /* .card p{
     font-size: 16px;

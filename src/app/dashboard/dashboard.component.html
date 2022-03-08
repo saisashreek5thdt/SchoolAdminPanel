@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" onload="openModal()">
     <div class="row">
         <div class="col-2">
             <div class="card nav-card mb-3" style="max-width: 18rem;">
@@ -117,27 +117,58 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title">
+                            <div class="reminder">
                                 <i class="bi bi-clock"></i> REMINDER
-                            </h3>
-                            <p class="card-text">Active</p>
-                            <div class="create-reminder">
-                                Create Reminder
-                                <p>Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time</p>
-                            <p>Descrption
-                                <input type="text">
-                                <button type="button" class="btn btn-save btn-sm">Create</button><br />
-                            </p>
-                        </div>
+                                <span id="active">Active
+                                    <button type="button" class="btn btn-edit">Edit</button>
+                                    <button type="button" class="btn btn-delete">Delete</button>
+                                    <button type="button" class="btn btn-complete">Complete</button>
+                                </span><br />
+                                <span id="createreminder">
+                                    Create Reminder
+                                    <form action="">
+                                        <label for="">Date</label>
+                                        <input type="date" id="date">
+                                        <label for="">Time</label>
+                                        <input type="time" id="time"><br/>
+                                        <label for="">Description</label>
+                                        <input type="text" id="description">
+                                        <button type="button" class="btn btn-save btn-sm">Create</button><br />
+                                    </form>
+                                </span>
+                            </div>
+                            <!-- <p class="card-text">Active</p>
+                            <div class="create-reminder"> -->
+
+                            <!-- <p>Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time</p> -->
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">TIME</h5>
+                            <!-- <h5 class="card-title">TIME</h5>
                             <p class="card-text">
-                            </p>
+                            </p> -->
+                            <div class="datetime">
+                                <div class="time">
+                                    <span id="period">PM</span>
+                                    <span id="hour">12:</span>
+                                    <span id="minutes">00</span>
+                                </div>
+                                <div class="date">
+                                    <span id="month">MONTH
+                                        <p>10</p>
+                                    </span>
+                                    <span id="daynum">DATE
+                                        <p>24</p>
+                                    </span>
+                                    <span id="dayname">DAY
+                                        <p>THU</p>
+                                    </span><br/>
+                                </div>
+                                <span id="today">TODAY</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,7 +180,9 @@
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/front-office.svg" alt="">
                         </div>
-                        Front Office
+                        <div class="option">
+                            Front Office
+                        </div>
                     </div>
 
 
@@ -157,56 +190,79 @@
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/students-info.svg" alt="">
                         </div>
-                        Student Information
+                        <div class="option">
+                            Student Information
+                        </div>
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#82B83A;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/fees-management.svg" alt="">
                         </div>
-                        Fees Management
+                        <div class="option">
+                            Fees Management
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#BF272D;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/budget.svg" alt="">
                         </div>
-                        Budget
+                        <div class="option">
+                            Budget
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#EC7E3C;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/attendance.svg" alt="">
                         </div>
-                        Attendance
+                        <div class="option">
+                            Attendance
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#1C8AB9;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/progress-report.svg" alt="">
                         </div>
-                        Progress Report
+                        <div class="option">
+                            Progress Report
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#ED72A0;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/academics.svg" alt="">
                         </div>
-                        Academics
+                        <div class="option">
+                            Academics
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#ABB8BF;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/employee-info.svg" alt="">
                         </div>
-                        Employee Information
+                        <div class="option">
+                            Employee Information
+                        </div>
+
                     </div>
 
                     <div class="icons-background" style="border-bottom: 7px solid#30BB67;">
                         <div class="icons-bg-circle">
                             <img src="../../assets/images/dashboard-images/announcements.svg" alt="">
                         </div>
-                        Announcements
+                        <div class="option">
+                            Announcements
+                        </div>
+
                     </div>
                 </div>
                 <!-- <div class="row">
@@ -293,4 +349,27 @@
             </div>
         </div>
     </div>
+     <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+    <!-- Launch demo modal -->
+  <!-- </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
