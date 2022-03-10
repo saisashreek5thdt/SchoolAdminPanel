@@ -1,4 +1,4 @@
-<div class="container-fluid" onload="openModal()">
+<div class="container-fluid">
     <div class="row">
         <div class="col-2">
             <div class="card nav-card mb-3" style="max-width: 18rem;">
@@ -24,7 +24,7 @@
                     <a class="nav-link active" aria-current="page" href="#">+ Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">+ Front Office</a>
+                    <a class="nav-link" href="#" routerLink="/front-office" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Front Office</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">+ Student Information</a>
@@ -153,19 +153,20 @@
                             </p> -->
                             <div class="datetime">
                                 <div class="time">
-                                    <span id="period">PM</span>
-                                    <span id="hour">12:</span>
-                                    <span id="minutes">00</span>
+                                    <span id="period">AM</span>
+                                    <span id="hour">{{ dateTime | date:'HH:mm'}}</span>
+                                    <!-- <span id="hour">{{ dateTime | date:'dd MM y'}}</span> -->
+                                    <!-- <span id="minutes">00</span> -->
                                 </div>
                                 <div class="date">
                                     <span id="month">MONTH
-                                        <p>10</p>
+                                        <p id="hour">{{ dateTime | date:'MM'}}</p>
                                     </span>
                                     <span id="daynum">DATE
-                                        <p>24</p>
+                                        <p id="hour">{{ dateTime | date:'dd'}}</p>
                                     </span>
                                     <span id="dayname">DAY
-                                        <p>THU</p>
+                                        <p id="hour">{{ dateTime | date:'MMM'}}</p>
                                     </span><br />
                                 </div>
                                 <span id="today">TODAY</span>
@@ -352,27 +353,5 @@
             </div>
         </div>
     </div>
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
-    <!-- Launch demo modal -->
-    <!-- </button> -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+<app-front-office></app-front-office>

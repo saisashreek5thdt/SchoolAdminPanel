@@ -22,14 +22,6 @@
     background-image: linear-gradient(#C6E5FB,#2D8CD5);
   }
 
-
-.modal-content{
-    height: 34rem;
-    width: 20rem;
-    border-radius: 25px;
-    background-color: #FFB33C;
-}
-
 .nav-card{
     /* background-color: #7BB9E6; */
     background-image: linear-gradient(#7BB9E6,#113D68) !important;
@@ -356,19 +348,19 @@ width: 12.8rem;
     margin-left: -2rem;
 }
 .date{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     display: flex;
 }
 .date span{
     position: relative;
     margin: 0 10px;
  
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     color: #00FFE5;
 }
 .date p{
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 0;
     text-align: center;
     color: white;

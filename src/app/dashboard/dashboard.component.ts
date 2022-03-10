@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-    
+  // constructor(private router: Router) { }
+  // constructor(private router: Router) { }
+  // constructor(private router: Router) { }
+  // constructor(private router: Router) { }
+  dateTime!: Date;
+  ngOnInit() {
+   timer(0, 1000).subscribe(() => {
+     this.dateTime = new Date()
+   })
   }
 }
